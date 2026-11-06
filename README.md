@@ -6,8 +6,8 @@ Marinara Engine의 정식 에이전트 메타데이터 현지화가 완료되기
 
 ## 호환 범위
 
-- 기준 앱: Marinara Engine `2.4.4`의 `staging` 계열
-- 기준 카탈로그: 2026-08-28에 관측한 공식 에이전트 패키지 37개
+- 기준 앱: Marinara Engine `2.5.2` (`v2.5.2`)
+- 기준 카탈로그: 2026-11-06에 확인한 `Pasta-Devs/Marinara-Agents` `main`의 공식 패키지 44개
 - 적용 언어: Marinara UI 언어가 한국어(`ko`, `ko-*`)인 경우
 
 Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바뀌면 일부 항목이 영어로 남을 수 있습니다. 이 경우 사용자 데이터에는 영향을 주지 않으며, 검수된 번역표 업데이트가 필요합니다.
@@ -16,8 +16,11 @@ Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바
 
 - 에이전트 탭에 표시되는 공식 에이전트 이름과 설명
 - 에이전트 라이브러리(공식 카탈로그)의 에이전트 이름과 설명
-- 라이브러리의 설치됨/미설치됨, 글쓰기/추적/기타 분류와 모드 필터
-- 2026-08-28 `staging`에서 관측한 공식 패키지 37개
+- Agent Organizer 목록의 축약 설명과 상세 페이지의 전체 설명
+- 공식 한국어 팩에 빠진 `Not installed` 목록 제목(카탈로그 안에서만 적용)
+- 공식 패키지 44개 (`slurp` 대신 `slurp2`, 표시명은 `Slurp`)
+
+모드 필터·분류·설치 목록 등의 UI 라벨은 공식 한국어 팩에 맡깁니다. 이미 한국어로 표시된 패키지 설명도 덮어쓰지 않습니다. [2.5.2 소스 및 공식 번역 대조 기록](docs/compatibility-2.5.2.md)을 참고하세요.
 
 사용자 작성 에이전트·폴더명·채팅 내용은 번역하지 않습니다. 새 패키지 또는 영문 설명이 변경된 패키지는 검수된 번역표에 추가되기 전까지 영어로 남습니다.
 
@@ -50,7 +53,7 @@ Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바
 릴리스에 함께 적힌 SHA-256과 내려받은 ZIP의 checksum을 비교하세요.
 
 ```bash
-sha256sum marinara-agents-ko-temporary-v0.1.0.zip
+sha256sum marinara-agents-ko-temporary-v0.2.0.zip
 ```
 
 ## 개발 검증
@@ -58,10 +61,22 @@ sha256sum marinara-agents-ko-temporary-v0.1.0.zip
 ```bash
 python tools/build.py
 node --check extension.js
-MARINARA_REPO=/path/to/Marinara-Engine node test/browser-test.cjs
+node --check test/browser-test.cjs
+python test/catalog-test.py
+# 이미 내려받은 공식 JSON과 읽기 전용 2.5.2 소스를 지정하면 12개 검사를 모두 실행합니다.
+OFFICIAL_CATALOG=/tmp/catalog.json OFFICIAL_KO=/tmp/ko.json \
+  MARINARA_REPO=/path/to/marinara-engine-ref python test/catalog-test.py
+# @playwright/test가 이미 설치된 의존성 경로를 명시합니다. 앱 서버는 실행하지 않습니다.
+MARINARA_REPO=/path/to/dependency-installation node test/browser-test.cjs
 ```
 
-브라우저 fixture 검증은 공식 카탈로그 37개의 이름·설명을 에이전트 탭과 라이브러리에 각각 동적으로 추가하여 총 74개 표시가 모두 한국어로 바뀌는지 확인합니다. 또한 화면 범위 제한, SPA 재렌더링, 언어 전환, cleanup 복원을 검증합니다.
+`data/catalog-reviewed.tsv`와 `data/ui-translations.json`이 편집 원본입니다. `tools/build.py`는 검수표에서 `data/exact-translations.json`과 `extension.js`를 함께 생성합니다. 생성 파일을 직접 편집하지 마세요.
+
+Python 검사는 표준 라이브러리만 사용합니다. 기본 실행은 8개 통과·외부 입력이 필요한 4개 건너뜀이고, 위 환경 변수를 모두 지정하면 공식 카탈로그·한국어 팩·소스 계약을 포함한 12개 검사를 실행합니다. 테스트는 외부 네트워크를 호출하지 않습니다.
+
+브라우저 fixture는 파일 URL만 열고 네트워크를 차단합니다. 44개 패키지를 카탈로그·에이전트 패널·상세 호스트에 표시해 132개 이름·설명 쌍과 목록 축약 설명 44개를 검증합니다. 공식 UI 번역 보존, 숨겨진 패널 활성화, SPA 재렌더링, 언어 전환, cleanup 복원도 검사합니다. Chromium 경로는 `CHROMIUM_PATH`로 지정할 수 있습니다(기본 `/usr/bin/chromium`).
+
+이번 환경에서는 Python 검사 12개와 JS 구문 검사 2개가 통과했습니다. 브라우저 검사는 참조 저장소의 Playwright 의존성 부재로 실행하지 못했고, 별도 Chromium 시작 확인도 샌드박스 소켓 권한 오류로 실패했습니다. 실제 화면 검증은 찹쌀의 QA가 필요합니다.
 
 ## 한계와 제거 기준
 
@@ -78,5 +93,6 @@ MARINARA_REPO=/path/to/Marinara-Engine node test/browser-test.cjs
 
 | 날짜 | 변경 |
 |------|------|
+| 2026-11-06 | v0.2.0: Engine 2.5.2·공식 패키지 44개 대응 |
 | 2026-08-28 | v0.1.0 배포 후보 작성 (펌킨) |
 | 2026-08-28 | 공개 배포 고지·호환 범위 추가 (펌킨) |

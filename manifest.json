@@ -3,7 +3,7 @@
   "version": 1,
   "config": {
     "name": "에이전트 탭 임시 한글화 확장",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "에이전트 탭과 에이전트 라이브러리의 공식 에이전트 이름과 설명을 임시로 한글화합니다.",
     "runtime": "client",
     "capabilities": ["full_page_access"],

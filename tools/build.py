@@ -1,15 +1,47 @@
 from __future__ import annotations
 
+import csv
 import json
+import re
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
-dictionary = json.loads((root / "data" / "exact-translations.json").read_text())
+with (root / "data" / "catalog-reviewed.tsv").open(encoding="utf-8", newline="") as source:
+    rows = list(csv.DictReader(source, delimiter="\t"))
+dictionary = {}
+for row in rows:
+    for field in ("name", "description"):
+        english, korean = row[f"english_{field}"], row[f"korean_{field}"]
+        if not english or not korean:
+            raise ValueError(f"Missing {field}: {row['id']}")
+        if english in dictionary and dictionary[english] != korean:
+            raise ValueError(f"Conflicting translation: {english}")
+        dictionary[english] = korean
+ui_dictionary = json.loads((root / "data" / "ui-translations.json").read_text(encoding="utf-8"))
+
+
+def organizer_tagline(description):
+    # v2.5.2 organizer-model.ts:50: first sentence, at most 90 UTF-16 code units.
+    sentence = re.split(r"(?<=\.)\s", description, maxsplit=1)[0]
+    encoded = sentence.encode("utf-16-le")
+    return encoded[:178].decode("utf-16-le", errors="surrogatepass") + "…" if len(encoded) > 180 else sentence
+
+
+catalog_dictionary = dict(ui_dictionary)
+for row in rows:
+    english = organizer_tagline(row["english_description"])
+    korean = organizer_tagline(row["korean_description"])
+    if english in catalog_dictionary and catalog_dictionary[english] != korean:
+        raise ValueError(f"Conflicting catalog summary: {english}")
+    catalog_dictionary[english] = korean
+
 template = r'''(() => {
   "use strict";
 
   const EXACT = Object.freeze(__DICTIONARY__);
-  const ROOT_SELECTOR = '[data-component="AgentCatalogView"], [data-component="FeatureAgentDetailHost"]';
+  const CATALOG_EXACT = Object.freeze(__CATALOG_DICTIONARY__);
+  const CATALOG_SELECTOR = '[data-component="AgentCatalogView"]';
+  const ROOT_SELECTOR = `${CATALOG_SELECTOR}, [data-component="FeatureAgentDetailHost"], [data-component="RightPanel"] [data-panel-key="agents"]:not([aria-hidden="true"])`;
   const ledger = new Map();
   const attributeLedger = new Map();
   let bodyObserver = null;
@@ -39,8 +71,8 @@ template = r'''(() => {
     const leading = current.match(/^\s*/u)?.[0] ?? "";
     const trailing = current.match(/\s*$/u)?.[0] ?? "";
     const core = current.slice(leading.length, current.length - trailing.length);
-    const translated = EXACT[core];
-    if (!translated) return;
+    const translated = EXACT[core] || (node.parentElement.closest(CATALOG_SELECTOR) ? CATALOG_EXACT[core] : null);
+    if (!translated || translated === core) return;
     replaceText(node, `${leading}${translated}${trailing}`);
   }
 
@@ -48,7 +80,7 @@ template = r'''(() => {
     for (const attribute of ["aria-label", "title", "placeholder"]) {
       const current = element.getAttribute(attribute);
       const translated = current ? EXACT[current] : null;
-      if (!translated) continue;
+      if (!translated || translated === current) continue;
       let records = attributeLedger.get(element);
       if (!records) {
         records = new Map();
@@ -68,17 +100,6 @@ template = r'''(() => {
     const walker = document.createTreeWalker(rootNode, NodeFilter.SHOW_TEXT);
     for (let node = walker.nextNode(); node; node = walker.nextNode()) {
       translateTextNode(node);
-    }
-  }
-
-  function translateAgentsPanelHeader() {
-    for (const panel of document.querySelectorAll('[data-component="RightPanel"]')) {
-      const activeAgents = panel.querySelector('[data-panel-key="agents"]:not([aria-hidden="true"])');
-      if (!activeAgents) continue;
-      translateAttributes(panel);
-      translateRoot(activeAgents);
-      const heading = panel.querySelector("h2");
-      if (heading) translateRoot(heading);
     }
   }
 
@@ -114,7 +135,6 @@ template = r'''(() => {
     applying = true;
     try {
       document.querySelectorAll(ROOT_SELECTOR).forEach(translateRoot);
-      translateAgentsPanelHeader();
     } finally {
       applying = false;
     }
@@ -137,7 +157,7 @@ template = r'''(() => {
       subtree: true,
       characterData: true,
       attributes: true,
-      attributeFilter: ["aria-label", "title", "placeholder"],
+      attributeFilter: ["aria-label", "title", "placeholder", "aria-hidden", "data-panel-key"],
     });
     languageObserver = new MutationObserver(schedule);
     languageObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
@@ -159,6 +179,10 @@ template = r'''(() => {
   else document.addEventListener("DOMContentLoaded", start, { once: true });
 })();
 '''
-output = template.replace("__DICTIONARY__", json.dumps(dictionary, ensure_ascii=False, indent=2))
-(root / "extension.js").write_text(output)
-print(json.dumps({"entries": len(dictionary), "bytes": len(output.encode())}))
+serialized = json.dumps(dictionary, ensure_ascii=False, indent=2)
+output = template.replace("__DICTIONARY__", serialized).replace(
+    "__CATALOG_DICTIONARY__", json.dumps(catalog_dictionary, ensure_ascii=False, indent=2)
+)
+(root / "data" / "exact-translations.json").write_text(serialized + "\n", encoding="utf-8")
+(root / "extension.js").write_text(output, encoding="utf-8")
+print(json.dumps({"packages": len(rows), "entries": len(dictionary), "catalog_entries": len(catalog_dictionary), "ui_entries": len(ui_dictionary), "bytes": len(output.encode())}))

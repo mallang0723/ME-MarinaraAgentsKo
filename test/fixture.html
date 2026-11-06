@@ -1,24 +1,30 @@
 <!doctype html>
 <html lang="ko">
   <body>
-    <div data-component="AgentCatalogView" aria-label="Filter agents by supported chat mode">
-      <h2 id="installed">Installed Agents</h2>
-      <h3 id="writer">Writer Agents</h3>
-      <span id="kind">Agent</span>
-      <article id="card">
-        <strong>Inventory Tracker</strong>
-        <p>Tracks currencies, equipped gear, and carried items as separate structured lists with compact quantities. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.</p>
-      </article>
+    <div data-component="AgentCatalogView">
+      <h2 id="installed">설치된 항목</h2>
+      <h2 id="not-installed">Not installed</h2>
+      <span id="official-writer">작성 에이전트</span>
+      <div id="mode-filter" aria-label="지원되는 채팅 모드로 에이전트 필터링">전체</div>
+      <div id="official-english"></div>
+      <span id="metadata-attribute" title="Inventory Tracker" aria-label="Inventory Tracker">Inventory Tracker</span>
+      <input id="input" value="Inventory Tracker">
+      <textarea id="textarea">Inventory Tracker</textarea>
+      <div id="editable" contenteditable="true">Inventory Tracker</div>
+      <script id="script" type="text/plain">Inventory Tracker</script>
+      <style id="style">/* Inventory Tracker */</style>
+      <p id="unknown">A new, unreviewed description.</p>
     </div>
-    <section data-component="RightPanel" aria-label="Agents">
-      <header><h2 id="panel-title">Agents</h2></header>
-      <div data-panel-key="agents" aria-hidden="false">
-        <article id="installed-agent-card">
-          <strong>Inventory Tracker</strong>
-          <p>Tracks currencies, equipped gear, and carried items as separate structured lists with compact quantities. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.</p>
-        </article>
-      </div>
+    <section data-component="RightPanel" aria-label="에이전트">
+      <header><h2 id="panel-title">에이전트</h2></header>
+      <div data-panel-key="agents" aria-hidden="false"></div>
+      <div data-panel-key="characters" aria-hidden="true"><span id="other-panel">Inventory Tracker</span></div>
     </section>
-    <div id="outside">Installed Agents</div>
+    <section data-component="FeatureAgentDetailHost"><span id="detail-ui">Not installed</span></section>
+    <section data-component="RightPanel">
+      <div id="hidden-panel" data-panel-key="agents" aria-hidden="true"><span id="hidden-agent">Inventory Tracker</span></div>
+    </section>
+    <div id="outside">Inventory Tracker</div>
+    <div id="outside-ui">Not installed</div>
   </body>
 </html>
