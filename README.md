@@ -2,7 +2,7 @@
 
 Marinara Engine의 정식 에이전트 메타데이터 현지화가 완료되기 전까지 사용하는 임시 Personal Extension입니다.
 
-이 프로젝트는 Marinara Engine 공식 프로젝트가 아닌 커뮤니티 배포 확장입니다. 공식 영문 카탈로그를 기준으로 한국어 번역을 유지하며, 확장 소스 전체를 배포 ZIP에 포함합니다.
+이 프로젝트는 Marinara Engine 공식 프로젝트가 아닌 커뮤니티 배포 확장입니다. 공식 영문 카탈로그를 기준으로 한국어 번역을 유지하며, 확장 소스 전체를 저장소에서 공개합니다.
 
 ## 호환 범위
 
@@ -41,21 +41,38 @@ Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바
 
 ## 설치
 
-1. 배포 ZIP을 내려받습니다.
-2. Marinara의 `Settings → Advanced → Danger Zone`에서 외부 확장 가져오기를 허용합니다.
-3. `Settings → Addons → External Extensions`에서 ZIP을 가져옵니다.
-4. 확장은 비활성 draft로 들어옵니다. `manifest.json`과 `extension.js`를 검토합니다.
-5. 요청 권한이 `full_page_access` 하나뿐인지 확인하고 경고를 승인한 뒤 활성화합니다.
-6. UI 언어를 한국어로 설정하고 에이전트 탭·라이브러리·채팅 설정 → 에이전트를 확인합니다.
+1. Marinara의 `Settings → Advanced → Danger Zone`에서 외부 확장 가져오기를 허용합니다.
+2. 아래 방법 중 하나로 확장을 가져옵니다. 확장은 비활성 draft로 들어옵니다.
+3. `manifest.json`과 `extension.js`를 검토합니다.
+4. 요청 권한이 `full_page_access` 하나뿐인지 확인하고 경고를 승인한 뒤 활성화합니다.
+5. UI 언어를 한국어로 설정하고 에이전트 탭·라이브러리·채팅 설정 → 에이전트를 확인합니다.
 
 제거할 때는 확장을 비활성화한 뒤 페이지를 새로고침하고 확장 기록을 삭제합니다.
 
-## 배포 파일 검증
+### GitHub로 설치
 
-릴리스에 함께 적힌 SHA-256과 내려받은 ZIP의 checksum을 비교하세요.
+Marinara 2.5.2의 `Settings → Addons → External Extensions`에는 GitHub 가져오기 항목이 없습니다. 위의 외부 확장 허용 설정을 마친 뒤 아래 도우미 확장 중 하나를 설치하고 활성화하세요.
+
+- [**ME.Fetchy**](https://github.com/FigCake/ME.Fetchy): 도우미 확장의 입력란에 다음을 입력합니다.
+
+  ```text
+  mallang0723/ME-MarinaraAgentsKo
+  ```
+
+- [**GitHub 확장 관리자**](https://github.com/f-en-rep/Marinara-GitHub-Manager): 저장소 기본 주소만 입력합니다(`/tree/main/...` 경로는 붙이지 않습니다).
+
+  ```text
+  https://github.com/mallang0723/ME-MarinaraAgentsKo
+  ```
+
+  이어서 "설치 대상 선택"에서 `manifest.json` 항목을 고릅니다.
+
+### 직접 가져오기
+
+설치 도우미 없이 설치하려면 현재 소스로 ZIP을 만들어 `Settings → Addons → External Extensions`에서 가져옵니다. ZIP 루트에 `manifest.json`과 `extension.js`가 함께 들어갑니다. 폴더로 가져오려면 `Import Extension Folder`로 저장소 루트의 `manifest.json`과 `extension.js`가 있는 폴더를 선택해도 됩니다.
 
 ```bash
-sha256sum marinara-agents-ko-temporary-v0.3.0.zip
+zip marinara-agents-ko.zip manifest.json extension.js
 ```
 
 ## 개발 검증
@@ -99,6 +116,7 @@ MARINARA_REPO=/path/to/dependency-installation node test/browser-test.cjs
 
 | 날짜 | 변경 |
 |------|------|
+| 2026-11-07 | 설치 안내: 릴리스 ZIP 제거, GitHub 설치 도우미 안내 추가 |
 | 2026-11-07 | v0.3.0: 채팅 에이전트 표면·per-Agent 설명·Omnibar·홈 대응 |
 | 2026-11-06 | v0.2.0: Engine 2.5.2·공식 패키지 44개 대응 |
 | 2026-08-28 | v0.1.0 배포 후보 작성 (펌킨) |
