@@ -1,0 +1,41 @@
+{
+  "metadata": [
+    "[data-component=\"AgentCatalogView\"]",
+    "[data-component=\"FeatureAgentDetailHost\"]",
+    "[data-component=\"RightPanel\"] [data-panel-key=\"agents\"]:not([aria-hidden=\"true\"])",
+    "[data-drawer$=\"-agents\"]",
+    "[data-chat-settings-section$=\"-agents\"]",
+    "[data-chat-control-window$=\"-agents\"]",
+    "[data-chat-agent-entry]",
+    "[id^=\"chat-settings-agent-menu-\"]",
+    "[data-agent-menus]",
+    "[data-trackers-control]",
+    "[data-component=\"ChatSetupWizard\"]",
+    "[data-component=\"Modal\"]",
+    "[data-command-center-result-row][data-result-id^=\"agent:\"]",
+    "[data-command-center-result-row][data-result-id^=\"home-tab:\"]",
+    "[data-component=\"HomeBrowserHub\"] .mari-home-discovery-card",
+    "[data-component=\"HomeBrowserHub.TabList\"]",
+    "[data-component=\"HomeBrowserHub.TabMenu\"]",
+    "[data-component=\"HomeBrowserHub.MobileBookmarksMenu\"]",
+    "[data-component=\"HomeBrowserHub.WidgetManager\"]",
+    "[data-home-widget-id^=\"agent:\"] header",
+    "[data-agent-activity]",
+    "[data-window] .mari-window__title",
+    "[data-drawer^=\"tracker-\"] .mari-drawer__title",
+    "[aria-labelledby$=\"-agent\"]",
+    "[data-drawer$=\"-gallery\"] [role=\"menu\"]",
+    "[data-chat-control-window$=\"-gallery\"] [role=\"menu\"]",
+    ".mari-list__item:has([data-result-type=\"agent\"])",
+    "[data-chat-input-popup=\"commands\"]",
+    "[data-component=\"GameSetupWizard\"]",
+    "#game-experience-setup-title",
+    ".mari-editor-panel button:has(.lucide-sparkles)",
+    "[data-agent-output] button:is([title=\"Collapse output\"], [title=\"Expand output\"], [title=\"출력 접기\"], [title=\"출력 펼치기\"])"
+  ],
+  "sections": [
+    "[data-drawer$=\"-agents\"]",
+    "[data-chat-settings-section$=\"-agents\"]",
+    "[data-chat-control-window$=\"-agents\"]"
+  ]
+}
