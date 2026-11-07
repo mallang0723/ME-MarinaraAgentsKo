@@ -9,29 +9,29 @@
   "8-Ball Pool": "8볼 풀",
   "Play 8-Ball Pool with a Conversation character. Install to use /8ball manually in any Conversation chat. Add under Chat Settings → Agents → Commands only to let characters initiate it.": "Conversation 캐릭터와 8볼 풀을 플레이합니다. 어느 Conversation 채팅에서나 /8ball을 수동으로 사용하려면 설치하세요. 캐릭터가 게임을 시작할 수 있게 하려는 경우에만 채팅 설정 → 에이전트 → 명령어에 추가하세요.",
   "Background": "배경",
-  "Selects the most fitting existing background image for the current scene from your background library. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "배경 라이브러리에서 현재 장면에 가장 잘 어울리는 기존 배경 이미지를 선택합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Selects the most fitting existing background image for the current scene from your background library. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "배경 라이브러리에서 현재 장면에 가장 잘 어울리는 기존 배경 이미지를 선택합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Beholder": "Beholder",
-  "Keeps track of what each character is wearing and holding, plus any injuries, so the story stays consistent. You can check it on a paper doll from the roleplay toolbar. Works with big online models, or with the free Beholder model that runs privately on your computer. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "이야기의 일관성을 유지하도록 각 캐릭터가 입고 있는 옷, 들고 있는 물건, 부상을 추적합니다. 롤플레이 도구 모음의 페이퍼 돌에서 확인할 수 있습니다. 대형 온라인 모델이나 사용자 컴퓨터에서 비공개로 실행되는 무료 Beholder 모델을 사용할 수 있습니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Keeps track of what each character is wearing and holding, plus any injuries, so the story stays consistent. You can check it on a paper doll from the roleplay toolbar. Works with big online models, or with the free Beholder model that runs privately on your computer. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "이야기의 일관성을 유지하도록 각 캐릭터가 입고 있는 옷, 들고 있는 물건, 부상을 추적합니다. 롤플레이 도구 모음의 페이퍼 돌에서 확인할 수 있습니다. 대형 온라인 모델이나 사용자 컴퓨터에서 비공개로 실행되는 무료 Beholder 모델을 사용할 수 있습니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Calls": "통화",
   "Adds live audio and video calls with Conversation characters. Add as both a Command and an Agent in Chat Settings → Agents → Commands/Calls for Conversation mode.": "Conversation 캐릭터와 실시간 음성 및 영상 통화를 추가합니다. Conversation 모드에서 채팅 설정 → 에이전트 → 명령어/통화에 명령어와 에이전트로 모두 추가하세요.",
   "Card Evolution Auditor": "카드 변화 검토기",
-  "Suggests character card updates when the story changes a character, for you to approve. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "이야기 속에서 캐릭터가 변화하면 사용자가 승인할 수 있도록 캐릭터 카드 수정안을 제안합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작가 에이전트에 에이전트를 추가하세요.",
+  "Suggests character card updates when the story changes a character, for you to approve. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "이야기 속에서 캐릭터가 변화하면 사용자가 승인할 수 있도록 캐릭터 카드 수정안을 제안합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작성 에이전트에 에이전트를 추가하세요.",
   "Character Tracker": "캐릭터 추적기",
-  "Tracks who is in the scene and how each character looks, feels, and acts, plus stats like HP. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "장면에 있는 캐릭터와 각 캐릭터의 외형, 감정, 행동, HP 등의 스탯을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Tracks who is in the scene and how each character looks, feels, and acts, plus stats like HP. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "장면에 있는 캐릭터와 각 캐릭터의 외형, 감정, 행동, HP 등의 스탯을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Chess": "체스",
   "Play Chess with a Conversation character. Install to use /chess manually in any Conversation chat. Add under Chat Settings → Agents → Commands only to let characters initiate it.": "Conversation 캐릭터와 체스를 플레이합니다. 어느 Conversation 채팅에서나 /chess를 수동으로 사용하려면 설치하세요. 캐릭터가 게임을 시작할 수 있게 하려는 경우에만 채팅 설정 → 에이전트 → 명령어에 추가하세요.",
   "Combat": "전투",
   "Manages combat encounters, initiative, HP tracking, and turn-based actions. Add as an Agent in Chat Settings → Agents → Misc Agents for Roleplay mode.": "전투 인카운터, 이니셔티브, HP 추적, 턴제 행동을 관리합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 기타 에이전트에 에이전트로 추가하세요.",
   "Continuity Checker": "연속성 검사기",
-  "Fixes mistakes about places, time, and physical details in AI messages without changing the story. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "이야기를 바꾸지 않고 AI 메시지의 장소, 시간, 물리적 세부 사항에 관한 오류를 수정합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작가 에이전트에 에이전트를 추가하세요.",
+  "Fixes mistakes about places, time, and physical details in AI messages without changing the story. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "이야기를 바꾸지 않고 AI 메시지의 장소, 시간, 물리적 세부 사항에 관한 오류를 수정합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작성 에이전트에 에이전트를 추가하세요.",
   "Custom Tracker": "커스텀 트래커",
-  "Tracks anything you want during the roleplay, like money, counters, or flags. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "롤플레이 중 돈, 카운터, 플래그 등 원하는 항목을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Tracks anything you want during the roleplay, like money, counters, or flags. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "롤플레이 중 돈, 카운터, 플래그 등 원하는 항목을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "CYOA Choices": "CYOA 선택지",
   "Offers a few choices after each AI message, like a Choose Your Own Adventure book. Click one to send it as your reply. Add the Agent in Chat Settings → Agents → Misc Agents for Roleplay mode.": "Choose Your Own Adventure 책처럼 각 AI 메시지 뒤에 몇 가지 선택지를 제시합니다. 하나를 클릭하면 사용자의 응답으로 전송됩니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 기타 에이전트에 에이전트를 추가하세요.",
   "Echo Chamber": "에코 챔버",
   "Simulates a live streaming-style chat reacting to your roleplay in real time. Add the Agent in Chat Settings → Agents → Misc Agents for Roleplay mode.": "롤플레이에 실시간으로 반응하는 라이브 스트리밍풍 채팅을 시뮬레이션합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 기타 에이전트에 에이전트를 추가하세요.",
   "Expression Engine": "표현 엔진",
-  "Changes character sprites to match how they feel. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "캐릭터의 감정에 맞춰 스프라이트를 바꿉니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Changes character sprites to match how they feel. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "캐릭터의 감정에 맞춰 스프라이트를 바꿉니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Gacha Forge": "Gacha Forge",
   "A complete gacha game mode. Describe a world and Gacha Forge builds the rest: banners to pull on, a cast the model writes and paints for you, story chapters told by a visual-novel narrator, and the battles, gear and events that grow around them. Install it, restart Marinara Engine when prompted, then open Home → Gacha Forge.": "완전한 가챠 게임 모드입니다. 세계를 설명하면 Gacha Forge가 나머지를 만듭니다: 뽑기를 진행할 배너, 모델이 글을 쓰고 그림을 그려 주는 등장인물, 비주얼 노벨 내레이터가 들려주는 스토리 챕터, 그리고 그 주위를 확장하는 전투, 장비, 이벤트. 설치하고 안내가 나오면 Marinara Engine을 다시 시작한 다음 홈 → Gacha Forge를 여세요.",
   "Haptic Feedback": "햅틱 피드백",
@@ -41,37 +41,37 @@
   "Immersive HTML": "몰입형 HTML",
   "Adds HTML/CSS/JS visual effects to AI messages. Add the Agent in Chat Settings → Agents → Misc Agents for Roleplay mode.": "AI 메시지에 HTML/CSS/JS 시각 효과를 추가합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 기타 에이전트에 에이전트를 추가하세요.",
   "Inventory Tracker": "인벤토리 트래커",
-  "Keeps track of your money, gear, and what you're carrying. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "돈, 장비, 소지품을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Keeps track of your money, gear, and what you're carrying. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "돈, 장비, 소지품을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Knowledge Retrieval": "지식 검색",
-  "Finds what matters for the current scene in your lorebooks and gives the AI a short summary of it. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "로어북에서 현재 장면에 중요한 정보를 찾아 AI에 짧은 요약을 제공합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작가 에이전트에 에이전트를 추가하세요.",
+  "Finds what matters for the current scene in your lorebooks and gives the AI a short summary of it. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "로어북에서 현재 장면에 중요한 정보를 찾아 AI에 짧은 요약을 제공합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작성 에이전트에 에이전트를 추가하세요.",
   "Knowledge Router": "지식 라우터",
-  "A cheaper Knowledge Retrieval: picks the lorebook entries that fit the scene and gives them to the AI as they are. Works best with big lorebooks whose entries have short descriptions. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "지식 검색보다 비용이 적게 드는 대안으로, 장면에 맞는 로어북 항목을 골라 AI에 그대로 제공합니다. 항목마다 짧은 설명이 있는 대형 로어북에 가장 적합합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작가 에이전트에 에이전트를 추가하세요.",
+  "A cheaper Knowledge Retrieval: picks the lorebook entries that fit the scene and gives them to the AI as they are. Works best with big lorebooks whose entries have short descriptions. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "지식 검색보다 비용이 적게 드는 대안으로, 장면에 맞는 로어북 항목을 골라 AI에 그대로 제공합니다. 항목마다 짧은 설명이 있는 대형 로어북에 가장 적합합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작성 에이전트에 에이전트를 추가하세요.",
   "Long-Term Memory": "장기 기억",
   "Remembers important things from your chats, characters, and lorebooks, and brings them back when they matter. Enable it per chat from Chat Settings → Agents → Long-Term Memory. In Roleplay and Game, you can also add it from Chat Settings → Agents → Misc Agents.": "채팅, 캐릭터, 로어북의 중요한 내용을 기억하고 필요할 때 다시 불러옵니다. 채팅 설정 → 에이전트 → 장기 기억에서 채팅별로 활성화하세요. Roleplay와 Game에서는 채팅 설정 → 에이전트 → 기타 에이전트에서도 추가할 수 있습니다.",
   "Lorebook Keeper": "로어북 키퍼",
   "Saves important story facts, characters, places, and world changes to the chat's lorebook as you play. Add the Agent in Chat Settings → Agents → Misc Agents/Lorebook Keeper for Roleplay and Game modes.": "플레이하는 동안 중요한 이야기 사실, 캐릭터, 장소, 세계의 변화를 채팅의 로어북에 저장합니다. Roleplay 및 Game 모드에서 채팅 설정 → 에이전트 → 기타 에이전트/로어북 키퍼에 에이전트를 추가하세요.",
   "Memory Nag": "Memory Nag",
-  "Remembers loose ends from your roleplay, like promises and open questions, and reminds the AI when they matter. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode. Once active, configure it in its standalone Memory Nag section.": "약속이나 아직 답하지 않은 질문처럼 롤플레이에서 해결되지 않은 일을 기억하고, 필요할 때 AI에 상기시킵니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요. 활성화한 뒤 독립된 Memory Nag 섹션에서 설정하세요.",
+  "Remembers loose ends from your roleplay, like promises and open questions, and reminds the AI when they matter. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode. Once active, configure it in its standalone Memory Nag section.": "약속이나 아직 답하지 않은 질문처럼 롤플레이에서 해결되지 않은 일을 기억하고, 필요할 때 AI에 상기시킵니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요. 활성화한 뒤 독립된 Memory Nag 섹션에서 설정하세요.",
   "Music DJ": "Music DJ",
   "Plays music that fits the mood of the story, from Spotify, YouTube, or your own Game Assets music. Enable the music player in Settings → General. Add both as a Command and an Agent in Chat Settings → Agents → Commands/Misc Agents/Music DJ for Conversation, Roleplay, and Game modes.": "Spotify, YouTube 또는 사용자의 게임 에셋 음악에서 이야기의 분위기에 맞는 음악을 재생합니다. 설정 → 일반에서 음악 플레이어를 활성화하세요. Conversation, Roleplay, Game 모드에서 채팅 설정 → 에이전트 → 명령어/기타 에이전트/Music DJ에 명령어와 에이전트로 모두 추가하세요.",
   "Narrative Director": "네러티브 디렉터",
-  "Gives the story a push in a new direction when you ask for it. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "사용자가 요청하면 이야기가 새로운 방향으로 전개되도록 이끕니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작가 에이전트에 에이전트를 추가하세요.",
+  "Gives the story a push in a new direction when you ask for it. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "사용자가 요청하면 이야기가 새로운 방향으로 전개되도록 이끕니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작성 에이전트에 에이전트를 추가하세요.",
   "Noodle": "Noodle",
   "A pretend social network where your characters post, share photos, and talk about your chats. Install it, restart Marinara Engine when prompted, then open Home → Noodle.": "캐릭터가 게시물을 올리고, 사진을 공유하고, 사용자의 채팅에 관해 이야기하는 가상 소셜 네트워크입니다. 설치하고 안내가 나오면 Marinara Engine을 다시 시작한 다음 홈 → Noodle을 여세요.",
   "Otome Hearth": "Otome Hearth",
   "An otome game in its own Home tab, made from your own characters: love interests who remember what you chose, their messages to you, dates and mini-games, and wishes for outfits and memories paid for only with Starlight you earn. Install it, restart Marinara Engine when prompted, then open Home → Otome Hearth.": "사용자의 캐릭터로 만드는 오토메 게임으로, 홈에 전용 탭이 생깁니다. 사용자의 선택을 기억하는 공략 대상, 그들이 보내는 메시지, 데이트와 미니게임, 직접 획득한 Starlight로만 비용을 지불하는 의상과 추억 소원을 제공합니다. 설치하고 안내가 나오면 Marinara Engine을 다시 시작한 다음 홈 → Otome Hearth를 여세요.",
   "Persona Stats": "페르소나 스탯",
-  "Tracks your persona's needs, like hunger, energy, and hygiene, as the story goes on. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "이야기가 진행됨에 따라 허기, 에너지, 위생 등 페르소나의 욕구를 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Tracks your persona's needs, like hunger, energy, and hygiene, as the story goes on. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "이야기가 진행됨에 따라 허기, 에너지, 위생 등 페르소나의 욕구를 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Poker": "포커",
   "Play Texas Hold’em Poker with Conversation characters. Install to use /poker manually in any Conversation chat. Add under Chat Settings → Agents → Commands only to let characters initiate it.": "Conversation 캐릭터와 Texas Hold’em Poker를 플레이합니다. 어느 Conversation 채팅에서나 /poker를 수동으로 사용하려면 설치하세요. 캐릭터가 게임을 시작할 수 있게 하려는 경우에만 채팅 설정 → 에이전트 → 명령어에 추가하세요.",
   "Prose Guardian": "프로즈 가디언",
-  "Removes banned words, repetition, and unwanted writing habits from AI messages without changing what they say. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "내용을 바꾸지 않고 AI 메시지에서 금지어, 반복, 원하지 않는 문체 습관을 제거합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작가 에이전트에 에이전트를 추가하세요.",
+  "Removes banned words, repetition, and unwanted writing habits from AI messages without changing what they say. Add the Agent in Chat Settings → Agents → Writer Agents for Roleplay mode.": "내용을 바꾸지 않고 AI 메시지에서 금지어, 반복, 원하지 않는 문체 습관을 제거합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 작성 에이전트에 에이전트를 추가하세요.",
   "Quartermaster": "병참관",
-  "An RPG character sheet and inventory for Roleplay: equip gear around your persona's portrait, save outfits, get AI art for items, and let it keep everything in step with the story. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "Roleplay용 RPG 캐릭터 시트와 인벤토리입니다. 페르소나 초상화 주위에 장비를 장착하고, 복장 조합을 저장하고, 아이템의 AI 그림을 생성하며, 모든 정보를 이야기의 흐름에 맞춰 유지합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "An RPG character sheet and inventory for Roleplay: equip gear around your persona's portrait, save outfits, get AI art for items, and let it keep everything in step with the story. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "Roleplay용 RPG 캐릭터 시트와 인벤토리입니다. 페르소나 초상화 주위에 장비를 장착하고, 복장 조합을 저장하고, 아이템의 AI 그림을 생성하며, 모든 정보를 이야기의 흐름에 맞춰 유지합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Quest Tracker": "퀘스트 트래커",
-  "Keeps track of your quests, their goals, and their rewards. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "퀘스트와 각 퀘스트의 목표, 보상을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Keeps track of your quests, their goals, and their rewards. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "퀘스트와 각 퀘스트의 목표, 보상을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Relationship Tracker": "관계 추적기",
-  "Tracks how the characters and your persona feel about each other. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "캐릭터와 페르소나가 서로에게 느끼는 감정을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Tracks how the characters and your persona feel about each other. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "캐릭터와 페르소나가 서로에게 느끼는 감정을 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "Rock-Paper-Scissors": "가위바위보",
   "Play Rock-Paper-Scissors with a Conversation character. Install to use /rps manually in any Conversation chat. Add under Chat Settings → Agents → Commands only to let characters initiate it.": "Conversation 캐릭터와 가위바위보를 플레이합니다. 어느 Conversation 채팅에서나 /rps를 수동으로 사용하려면 설치하세요. 캐릭터가 게임을 시작할 수 있게 하려는 경우에만 채팅 설정 → 에이전트 → 명령어에 추가하세요.",
   "Saucelings": "Saucelings",
@@ -87,12 +87,46 @@
   "UNO": "UNO",
   "Play UNO with Conversation characters. Install to use /uno manually in any Conversation chat. Add under Chat Settings → Agents → Commands only to let characters initiate it.": "Conversation 캐릭터와 UNO를 플레이합니다. 어느 Conversation 채팅에서나 /uno를 수동으로 사용하려면 설치하세요. 캐릭터가 게임을 시작할 수 있게 하려는 경우에만 채팅 설정 → 에이전트 → 명령어에 추가하세요.",
   "World Maps": "World Maps",
-  "Adds world maps to Roleplay and Game, from whole regions down to single rooms, with art and travel between places. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay and Game modes.": "Roleplay와 Game에 지역 전체부터 개별 방까지 다루는 월드 지도를 추가하며, 아트워크와 장소 간 이동 기능을 제공합니다. Roleplay 및 Game 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요.",
+  "Adds world maps to Roleplay and Game, from whole regions down to single rooms, with art and travel between places. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay and Game modes.": "Roleplay와 Game에 지역 전체부터 개별 방까지 다루는 월드 지도를 추가하며, 아트워크와 장소 간 이동 기능을 제공합니다. Roleplay 및 Game 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
   "World State": "월드 트래커",
-  "Tracks date, time, weather, location, temperature, and custom world details automatically. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "날짜, 시간, 날씨, 장소, 온도, 사용자 지정 월드 세부 정보를 자동으로 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 트래커 에이전트에 에이전트를 추가하세요."
+  "Tracks date, time, weather, location, temperature, and custom world details automatically. Add the Agent in Chat Settings → Agents → Tracker Agents for Roleplay mode.": "날짜, 시간, 날씨, 장소, 온도, 사용자 지정 월드 세부 정보를 자동으로 추적합니다. Roleplay 모드에서 채팅 설정 → 에이전트 → 추적 에이전트에 에이전트를 추가하세요.",
+  "Shows your characters and personas as animated 2D avatars that blink, talk, and change faces with each reply. Uses your sprites or a mesh avatar file.": "캐릭터와 페르소나를 응답할 때마다 눈을 깜빡이고, 말하고, 표정을 바꾸는 움직이는 2D 아바타로 표시합니다. 사용자의 스프라이트나 메시 아바타 파일을 사용합니다.",
+  "Shows your characters and personas as animated 3D models that blink, talk, and change faces with each reply. Uses VRM model files; Marinara Engine versions after 2.5.1 also take MMD PMX models and rigged GLB and FBX models.": "캐릭터와 페르소나를 응답할 때마다 눈을 깜빡이고, 말하고, 표정을 바꾸는 움직이는 3D 모델로 표시합니다. VRM 모델 파일을 사용하며, Marinara Engine 2.5.1보다 최신 버전에서는 MMD PMX 모델과 리깅된 GLB 및 FBX 모델도 사용할 수 있습니다.",
+  "Keeps track of what each character is wearing and holding, plus any injuries, so the story stays consistent. You can check it on a paper doll from the roleplay toolbar. Works with big online models, or with the free Beholder model that runs privately on your computer.": "이야기의 일관성을 유지하도록 각 캐릭터가 입고 있는 옷, 들고 있는 물건, 부상을 추적합니다. 롤플레이 도구 모음의 페이퍼 돌에서 확인할 수 있습니다. 대형 온라인 모델이나 사용자 컴퓨터에서 비공개로 실행되는 무료 Beholder 모델을 사용할 수 있습니다.",
+  "Adds live audio and video calls with Conversation characters.": "Conversation 캐릭터와 실시간 음성 및 영상 통화를 추가합니다.",
+  "Suggests character card updates when the story changes a character, for you to approve.": "이야기 속에서 캐릭터가 변화하면 사용자가 승인할 수 있도록 캐릭터 카드 수정안을 제안합니다.",
+  "Fixes mistakes about places, time, and physical details in AI messages without changing the story.": "이야기를 바꾸지 않고 AI 메시지의 장소, 시간, 물리적 세부 사항에 관한 오류를 수정합니다.",
+  "Controls connected intimate toys to match what happens in the story. Needs Intiface Central running on your computer, with your toy connected there first.": "이야기에서 일어나는 일에 맞춰 연결된 성인용 기기를 제어합니다. 사용자 컴퓨터에서 Intiface Central을 실행하고 먼저 그곳에서 기기를 연결해야 합니다.",
+  "Adds HTML/CSS/JS visual effects to AI messages.": "AI 메시지에 HTML/CSS/JS 시각 효과를 추가합니다.",
+  "Finds what matters for the current scene in your lorebooks and gives the AI a short summary of it.": "로어북에서 현재 장면에 중요한 정보를 찾아 AI에 짧은 요약을 제공합니다.",
+  "A cheaper Knowledge Retrieval: picks the lorebook entries that fit the scene and gives them to the AI as they are. Works best with big lorebooks whose entries have short descriptions.": "지식 검색보다 비용이 적게 드는 대안으로, 장면에 맞는 로어북 항목을 골라 AI에 그대로 제공합니다. 항목마다 짧은 설명이 있는 대형 로어북에 가장 적합합니다.",
+  "Remembers important things from your chats, characters, and lorebooks, and brings them back when they matter.": "채팅, 캐릭터, 로어북의 중요한 내용을 기억하고 필요할 때 다시 불러옵니다.",
+  "Saves important story facts, characters, places, and world changes to the chat's lorebook as you play.": "플레이하는 동안 중요한 이야기 사실, 캐릭터, 장소, 세계의 변화를 채팅의 로어북에 저장합니다.",
+  "Remembers loose ends from your roleplay, like promises and open questions, and reminds the AI when they matter.": "약속이나 아직 답하지 않은 질문처럼 롤플레이에서 해결되지 않은 일을 기억하고, 필요할 때 AI에 상기시킵니다.",
+  "A pretend social network where your characters post, share photos, and talk about your chats.": "캐릭터가 게시물을 올리고, 사진을 공유하고, 사용자의 채팅에 관해 이야기하는 가상 소셜 네트워크입니다.",
+  "An otome game in its own Home tab, made from your own characters: love interests who remember what you chose, their messages to you, dates and mini-games, and wishes for outfits and memories paid for only with Starlight you earn.": "사용자의 캐릭터로 만드는 오토메 게임으로, 홈에 전용 탭이 생깁니다. 사용자의 선택을 기억하는 공략 대상, 그들이 보내는 메시지, 데이트와 미니게임, 직접 획득한 Starlight로만 비용을 지불하는 의상과 추억 소원을 제공합니다.",
+  "Removes banned words, repetition, and unwanted writing habits from AI messages without changing what they say.": "내용을 바꾸지 않고 AI 메시지에서 금지어, 반복, 원하지 않는 문체 습관을 제거합니다.",
+  "An RPG character sheet and inventory for Roleplay: equip gear around your persona's portrait, save outfits, get AI art for items, and let it keep everything in step with the story.": "Roleplay용 RPG 캐릭터 시트와 인벤토리입니다. 페르소나 초상화 주위에 장비를 장착하고, 복장 조합을 저장하고, 아이템의 AI 그림을 생성하며, 모든 정보를 이야기의 흐름에 맞춰 유지합니다.",
+  "Tracks how the characters and your persona feel about each other.": "캐릭터와 페르소나가 서로에게 느끼는 감정을 추적합니다.",
+  "A Tamagotchi-style pet in Home: pick a character to look after an egg, let their personality drive their care schedule, cover the gaps they miss, watch its sauce temperament shift, retire elders to a Menagerie, and let the caretaker find eggs of their own invention while you chat.": "홈에서 키우는 다마고치풍 반려동물입니다. 알을 돌볼 캐릭터를 고르면 성격에 따라 돌봄 일정이 정해집니다. 캐릭터가 놓친 돌봄을 보충하고, 반려동물의 소스 기질이 변하는 모습을 지켜보고, 나이 든 반려동물은 Menagerie로 보내 은퇴시키세요. 채팅하는 동안 돌보는 캐릭터가 자신만의 알을 발견하게 할 수도 있습니다.",
+  "A private social app for your characters. Turn characters and personas into Creators, post public or locked photos, and watch a simulated audience follow, subscribe, unlock, comment, and message them. By default, it is tuned for an adult experience.": "캐릭터를 위한 비공개 소셜 앱입니다. 캐릭터와 페르소나를 크리에이터로 만들고, 공개 또는 잠긴 사진을 게시하고, 시뮬레이션된 청중이 팔로우하고 구독하고 잠금을 해제하고 댓글과 메시지를 남기는 모습을 지켜보세요. 기본적으로 성인용 경험에 맞춰져 있습니다.",
+  "A co-writing book. Pick a connection, your characters, personas and lorebooks, describe the story, and the model writes it chapter by chapter while you guide it with an author's note and edit anything on the page.": "함께 집필하는 책입니다. 연결, 캐릭터, 페르소나, 로어북을 선택하고 이야기를 설명하면 모델이 챕터별로 글을 씁니다. 작가의 노트로 방향을 안내하고 페이지의 어느 부분이든 수정할 수 있습니다.",
+  "Turns Game and Roleplay scenes into storyboards of still images or short animations.": "Game 및 Roleplay 장면을 정지 이미지나 짧은 애니메이션으로 구성된 스토리보드로 만듭니다.",
+  "Adds world maps to Roleplay and Game, from whole regions down to single rooms, with art and travel between places.": "Roleplay와 Game에 지역 전체부터 개별 방까지 다루는 월드 지도를 추가하며, 아트워크와 장소 간 이동 기능을 제공합니다.",
+  "Selects the most fitting existing background image for the current scene from your background library.": "배경 라이브러리에서 현재 장면에 가장 잘 어울리는 기존 배경 이미지를 선택합니다.",
+  "Tracks who is in the scene and how each character looks, feels, and acts, plus stats like HP.": "장면에 있는 캐릭터와 각 캐릭터의 외형, 감정, 행동, HP 등의 스탯을 추적합니다.",
+  "Tracks anything you want during the roleplay, like money, counters, or flags.": "롤플레이 중 돈, 카운터, 플래그 등 원하는 항목을 추적합니다.",
+  "Offers a few choices after each AI message, like a Choose Your Own Adventure book. Click one to send it as your reply.": "Choose Your Own Adventure 책처럼 각 AI 메시지 뒤에 몇 가지 선택지를 제시합니다. 하나를 클릭하면 사용자의 응답으로 전송됩니다.",
+  "Simulates a live streaming-style chat reacting to your roleplay in real time.": "롤플레이에 실시간으로 반응하는 라이브 스트리밍풍 채팅을 시뮬레이션합니다.",
+  "Changes character sprites to match how they feel.": "캐릭터의 감정에 맞춰 스프라이트를 바꿉니다.",
+  "Creates images and videos, with optional automatic scene backgrounds for Roleplay location changes.": "이미지와 동영상을 생성하며, Roleplay에서 장소가 바뀔 때 장면 배경을 자동 생성하는 선택 기능도 제공합니다.",
+  "Keeps track of your money, gear, and what you're carrying.": "돈, 장비, 소지품을 추적합니다.",
+  "Gives the story a push in a new direction when you ask for it.": "사용자가 요청하면 이야기가 새로운 방향으로 전개되도록 이끕니다.",
+  "Tracks your persona's needs, like hunger, energy, and hygiene, as the story goes on.": "이야기가 진행됨에 따라 허기, 에너지, 위생 등 페르소나의 욕구를 추적합니다.",
+  "Keeps track of your quests, their goals, and their rewards.": "퀘스트와 각 퀘스트의 목표, 보상을 추적합니다.",
+  "Tracks date, time, weather, location, temperature, and custom world details automatically.": "날짜, 시간, 날씨, 장소, 온도, 사용자 지정 월드 세부 정보를 자동으로 추적합니다."
 });
   const CATALOG_EXACT = Object.freeze({
-  "Not installed": "설치되지 않음",
   "Shows your characters and personas as animated 2D avatars that blink, talk, and change fa…": "캐릭터와 페르소나를 응답할 때마다 눈을 깜빡이고, 말하고, 표정을 바꾸는 움직이는 2D 아바타로 표시합니다.",
   "Shows your characters and personas as animated 3D models that blink, talk, and change fac…": "캐릭터와 페르소나를 응답할 때마다 눈을 깜빡이고, 말하고, 표정을 바꾸는 움직이는 3D 모델로 표시합니다.",
   "Play 8-Ball Pool with a Conversation character.": "Conversation 캐릭터와 8볼 풀을 플레이합니다.",
@@ -138,137 +172,224 @@
   "Adds world maps to Roleplay and Game, from whole regions down to single rooms, with art a…": "Roleplay와 Game에 지역 전체부터 개별 방까지 다루는 월드 지도를 추가하며, 아트워크와 장소 간 이동 기능을 제공합니다.",
   "Tracks date, time, weather, location, temperature, and custom world details automatically.": "날짜, 시간, 날씨, 장소, 온도, 사용자 지정 월드 세부 정보를 자동으로 추적합니다."
 });
-  const CATALOG_SELECTOR = '[data-component="AgentCatalogView"]';
-  const ROOT_SELECTOR = `${CATALOG_SELECTOR}, [data-component="FeatureAgentDetailHost"], [data-component="RightPanel"] [data-panel-key="agents"]:not([aria-hidden="true"])`;
+  const UI_EXACT = Object.freeze({
+  "Writer Agents": "작성 에이전트",
+  "Tracker Agents": "추적 에이전트",
+  "Misc Agents": "기타 에이전트",
+  "Improve prose quality, maintain continuity, and shape the narrative direction of your roleplay.": "문장의 완성도를 높이고, 이야기의 일관성을 유지하며, 롤플레이의 서사 방향을 잡습니다.",
+  "Automatically track world state, character stats, quests, expressions, and other data that changes over time.": "세계 상태, 캐릭터 스탯, 퀘스트, 표정 등 시간에 따라 변하는 데이터를 자동으로 추적합니다.",
+  "Specialized utilities — image generation, combat systems, music, summaries, and other extras.": "이미지 생성, 전투 시스템, 음악, 요약 등 다양한 부가 기능을 제공합니다."
+});
+  const NAMES = Object.freeze({"2D Avatars": "2D 아바타", "3D Avatars": "3D 아바타", "8-Ball Pool": "8볼 풀", "Background": "배경", "Beholder": "Beholder", "Calls": "통화", "Card Evolution Auditor": "카드 변화 검토기", "Character Tracker": "캐릭터 추적기", "Chess": "체스", "Combat": "전투", "Continuity Checker": "연속성 검사기", "Custom Tracker": "커스텀 트래커", "CYOA Choices": "CYOA 선택지", "Echo Chamber": "에코 챔버", "Expression Engine": "표현 엔진", "Gacha Forge": "Gacha Forge", "Haptic Feedback": "햅틱 피드백", "Illustrator": "Illustrator", "Immersive HTML": "몰입형 HTML", "Inventory Tracker": "인벤토리 트래커", "Knowledge Retrieval": "지식 검색", "Knowledge Router": "지식 라우터", "Long-Term Memory": "장기 기억", "Lorebook Keeper": "로어북 키퍼", "Memory Nag": "Memory Nag", "Music DJ": "Music DJ", "Narrative Director": "네러티브 디렉터", "Noodle": "Noodle", "Otome Hearth": "Otome Hearth", "Persona Stats": "페르소나 스탯", "Poker": "포커", "Prose Guardian": "프로즈 가디언", "Quartermaster": "병참관", "Quest Tracker": "퀘스트 트래커", "Relationship Tracker": "관계 추적기", "Rock-Paper-Scissors": "가위바위보", "Saucelings": "Saucelings", "Slurp": "Slurp", "Story Writer": "Story Writer", "Storyboard": "스토리보드", "Tic-Tac-Toe": "틱택토", "UNO": "UNO", "World Maps": "World Maps", "World State": "월드 트래커"});
+  const MODAL_TITLES = new Set(["2D Avatars", "2D Avatars 추가", "2D 아바타", "2D 아바타 추가", "3D Avatars", "3D Avatars 추가", "3D 아바타", "3D 아바타 추가", "8-Ball Pool", "8-Ball Pool 추가", "8볼 풀", "8볼 풀 추가", "Add 2D Avatars", "Add 2D 아바타", "Add 3D Avatars", "Add 3D 아바타", "Add 8-Ball Pool", "Add 8볼 풀", "Add Background", "Add Beholder", "Add CYOA Choices", "Add CYOA 선택지", "Add Calls", "Add Card Evolution Auditor", "Add Character Tracker", "Add Chess", "Add Combat", "Add Continuity Checker", "Add Custom Tracker", "Add Echo Chamber", "Add Expression Engine", "Add Gacha Forge", "Add Haptic Feedback", "Add Illustrator", "Add Immersive HTML", "Add Inventory Tracker", "Add Knowledge Retrieval", "Add Knowledge Router", "Add Long-Term Memory", "Add Lorebook Keeper", "Add Memory Nag", "Add Music DJ", "Add Narrative Director", "Add Noodle", "Add Otome Hearth", "Add Persona Stats", "Add Poker", "Add Prose Guardian", "Add Quartermaster", "Add Quest Tracker", "Add Relationship Tracker", "Add Rock-Paper-Scissors", "Add Saucelings", "Add Slurp", "Add Story Writer", "Add Storyboard", "Add Tic-Tac-Toe", "Add UNO", "Add World Maps", "Add World State", "Add 가위바위보", "Add 관계 추적기", "Add 네러티브 디렉터", "Add 로어북 키퍼", "Add 몰입형 HTML", "Add 배경", "Add 병참관", "Add 스토리보드", "Add 에코 챔버", "Add 연속성 검사기", "Add 월드 트래커", "Add 인벤토리 트래커", "Add 장기 기억", "Add 전투", "Add 지식 검색", "Add 지식 라우터", "Add 체스", "Add 카드 변화 검토기", "Add 캐릭터 추적기", "Add 커스텀 트래커", "Add 퀘스트 트래커", "Add 통화", "Add 틱택토", "Add 페르소나 스탯", "Add 포커", "Add 표현 엔진", "Add 프로즈 가디언", "Add 햅틱 피드백", "Agent Suite", "Background", "Background 추가", "Beholder", "Beholder 추가", "CYOA Choices", "CYOA Choices 추가", "CYOA 선택지", "CYOA 선택지 추가", "Calls", "Calls 추가", "Card Evolution Auditor", "Card Evolution Auditor 추가", "Character Tracker", "Character Tracker 추가", "Chess", "Chess 추가", "Combat", "Combat 추가", "Continuity Checker", "Continuity Checker 추가", "Custom Tracker", "Custom Tracker 추가", "Echo Chamber", "Echo Chamber 추가", "Expression Engine", "Expression Engine 추가", "Gacha Forge", "Gacha Forge 추가", "Haptic Feedback", "Haptic Feedback 추가", "Illustrator", "Illustrator 추가", "Immersive HTML", "Immersive HTML 추가", "Inventory Tracker", "Inventory Tracker 추가", "Knowledge Retrieval", "Knowledge Retrieval 추가", "Knowledge Router", "Knowledge Router 추가", "Long-Term Memory", "Long-Term Memory 추가", "Lorebook Keeper", "Lorebook Keeper 추가", "Memory Nag", "Memory Nag 추가", "Music DJ", "Music DJ 추가", "Narrative Director", "Narrative Director 추가", "Noodle", "Noodle 추가", "Otome Hearth", "Otome Hearth 추가", "Persona Stats", "Persona Stats 추가", "Poker", "Poker 추가", "Prose Guardian", "Prose Guardian 추가", "Quartermaster", "Quartermaster 추가", "Quest Tracker", "Quest Tracker 추가", "Relationship Tracker", "Relationship Tracker 추가", "Review Character Card Updates", "Rock-Paper-Scissors", "Rock-Paper-Scissors 추가", "Saucelings", "Saucelings 추가", "Slurp", "Slurp 추가", "Start a game", "Story Writer", "Story Writer 추가", "Storyboard", "Storyboard 추가", "Tic-Tac-Toe", "Tic-Tac-Toe 추가", "UNO", "UNO 추가", "World Maps", "World Maps 추가", "World State", "World State 추가", "가위바위보", "가위바위보 추가", "게임 시작", "관계 추적기", "관계 추적기 추가", "네러티브 디렉터", "네러티브 디렉터 추가", "로어북 키퍼", "로어북 키퍼 추가", "몰입형 HTML", "몰입형 HTML 추가", "배경", "배경 추가", "병참관", "병참관 추가", "스토리보드", "스토리보드 추가", "에이전트 모음", "에코 챔버", "에코 챔버 추가", "연속성 검사기", "연속성 검사기 추가", "월드 트래커", "월드 트래커 추가", "인벤토리 트래커", "인벤토리 트래커 추가", "장기 기억", "장기 기억 추가", "전투", "전투 추가", "지식 검색", "지식 검색 추가", "지식 라우터", "지식 라우터 추가", "체스", "체스 추가", "카드 변화 검토기", "카드 변화 검토기 추가", "캐릭터 추적기", "캐릭터 추적기 추가", "캐릭터 카드 업데이트 검토", "커스텀 트래커", "커스텀 트래커 추가", "퀘스트 트래커", "퀘스트 트래커 추가", "통화", "통화 추가", "틱택토", "틱택토 추가", "페르소나 스탯", "페르소나 스탯 추가", "포커", "포커 추가", "표현 엔진", "표현 엔진 추가", "프로즈 가디언", "프로즈 가디언 추가", "햅틱 피드백", "햅틱 피드백 추가"]);
+  const ROOT_SELECTOR = "[data-component=\"AgentCatalogView\"], [data-component=\"FeatureAgentDetailHost\"], [data-component=\"RightPanel\"] [data-panel-key=\"agents\"]:not([aria-hidden=\"true\"]), [data-drawer$=\"-agents\"], [data-chat-settings-section$=\"-agents\"], [data-chat-control-window$=\"-agents\"], [data-chat-agent-entry], [id^=\"chat-settings-agent-menu-\"], [data-agent-menus], [data-trackers-control], [data-component=\"ChatSetupWizard\"], [data-component=\"Modal\"], [data-command-center-result-row][data-result-id^=\"agent:\"], [data-command-center-result-row][data-result-id^=\"home-tab:\"], [data-component=\"HomeBrowserHub\"] .mari-home-discovery-card, [data-component=\"HomeBrowserHub.TabList\"], [data-component=\"HomeBrowserHub.TabMenu\"], [data-component=\"HomeBrowserHub.MobileBookmarksMenu\"], [data-component=\"HomeBrowserHub.WidgetManager\"], [data-home-widget-id^=\"agent:\"] header, [data-agent-activity], [data-window] .mari-window__title, [data-drawer^=\"tracker-\"] .mari-drawer__title, [aria-labelledby$=\"-agent\"], [data-drawer$=\"-gallery\"] [role=\"menu\"], [data-chat-control-window$=\"-gallery\"] [role=\"menu\"], .mari-list__item:has([data-result-type=\"agent\"]), [data-chat-input-popup=\"commands\"], [data-component=\"GameSetupWizard\"], #game-experience-setup-title, .mari-editor-panel button:has(.lucide-sparkles), [data-agent-output] button:is([title=\"Collapse output\"], [title=\"Expand output\"], [title=\"\ucd9c\ub825 \uc811\uae30\"], [title=\"\ucd9c\ub825 \ud3bc\uce58\uae30\"])";
+  const SECTION_SELECTOR = "[data-drawer$=\"-agents\"], [data-chat-settings-section$=\"-agents\"], [data-chat-control-window$=\"-agents\"]";
+  const EXCLUDE = 'script, style, input, textarea, [contenteditable]:not([contenteditable="false"]), [data-chat-message-editor], .prose';
+  const ownedContainers = new WeakSet();
   const ledger = new Map();
   const attributeLedger = new Map();
-  let bodyObserver = null;
+  let observer = null;
   let languageObserver = null;
-  let scheduled = false;
-  let applying = false;
   let stopped = false;
 
   function isKorean() {
-    const locale = String(document.documentElement.lang || "").toLowerCase();
-    return locale === "ko" || locale.startsWith("ko-");
+    return /^ko(?:-|$)/i.test(document.documentElement.lang || "");
   }
 
-  function replaceText(node, translated) {
-    const current = node.nodeValue;
-    const previous = ledger.get(node);
-    if (!previous || current !== previous.translated) {
-      ledger.set(node, { original: current, translated });
+  function eligible(element) {
+    if (!element || element.closest(EXCLUDE)) return false;
+    const root = element.closest(ROOT_SELECTOR);
+    if (root?.matches('[data-component="Modal"]')) return MODAL_TITLES.has(root.getAttribute("aria-label"));
+    return root;
+  }
+
+  function lookup(dictionary, key) {
+    return Object.hasOwn(dictionary, key) ? dictionary[key] : null;
+  }
+
+  function translation(current, element) {
+    const core = current.trim();
+    // UI labels belong to the locale pack except this hardcoded drawer array.
+    let value = lookup(EXACT, core) || lookup(CATALOG_EXACT, core) ||
+      (element.closest(SECTION_SELECTOR) ? lookup(UI_EXACT, core) : null);
+    // OrganizerHome joins package names for update/kit summaries (118, 156).
+    // Every complete name must be reviewed; never replace an arbitrary substring.
+    if (!value && element.closest('[data-component="AgentCatalogView"]')) {
+      const updates = core.split(" · ").map(part => {
+        const match = part.match(/^(.*?) (\d+\.\d+\.\d+(?:[-+][\w.+-]+)?)$/);
+        return match && lookup(NAMES, match[1]) ? `${lookup(NAMES, match[1])} ${match[2]}` : null;
+      });
+      if (updates.every(Boolean)) value = updates.join(" · ");
+      else if (core.includes(", ")) {
+        const names = core.split(", ").map(name => lookup(NAMES, name));
+        if (names.every(Boolean)) value = names.join(", ");
+      }
     }
-    node.nodeValue = translated;
+    return value && value !== core ? current.replace(core, () => value) : null;
   }
 
-  function translateTextNode(node) {
-    if (!node.parentElement) return;
-    if (node.parentElement.closest('script, style, input, textarea, [contenteditable="true"]')) return;
-    const current = node.nodeValue;
-    const leading = current.match(/^\s*/u)?.[0] ?? "";
-    const trailing = current.match(/\s*$/u)?.[0] ?? "";
-    const core = current.slice(leading.length, current.length - trailing.length);
-    const translated = EXACT[core] || (node.parentElement.closest(CATALOG_SELECTOR) ? CATALOG_EXACT[core] : null);
-    if (!translated || translated === core) return;
-    replaceText(node, `${leading}${translated}${trailing}`);
+  function markOwned(element) {
+    for (; element && element !== document.body; element = element.parentElement) ownedContainers.add(element);
+  }
+
+  function replaceText(node, value) {
+    if (node.nodeValue === value) return;
+    const previous = ledger.get(node);
+    if (!previous || node.nodeValue !== previous.translated) {
+      ledger.set(node, { original: node.nodeValue, translated: value });
+    } else previous.translated = value;
+    markOwned(node.parentElement);
+    node.nodeValue = value;
+  }
+
+  function translateText(node) {
+    const element = node.parentElement;
+    if (!eligible(element)) return;
+    // Omnibar highlights split a single metadata string across text/mark nodes.
+    // Retain all React-owned nodes so subsequent reconciliation and cleanup work.
+    const label = element.tagName === "MARK" ? element.parentElement : element;
+    if (label && label.children.length && [...label.children].every(child => child.tagName === "MARK")) {
+      const value = translation(label.textContent, label);
+      if (value) {
+        const walker = document.createTreeWalker(label, NodeFilter.SHOW_TEXT);
+        let first = true;
+        for (let text = walker.nextNode(); text; text = walker.nextNode()) {
+          replaceText(text, first ? value : "");
+          first = false;
+        }
+        return;
+      }
+    }
+    const value = translation(node.nodeValue, element);
+    if (value) replaceText(node, value);
   }
 
   function translateAttributes(element) {
-    for (const attribute of ["aria-label", "title", "placeholder"]) {
+    if (!eligible(element)) return;
+    for (const attribute of ["aria-label", "title", "alt", "placeholder"]) {
       const current = element.getAttribute(attribute);
-      const translated = current ? EXACT[current] : null;
-      if (!translated || translated === current) continue;
+      const value = current ? translation(current, element) : null;
+      if (!value) continue;
       let records = attributeLedger.get(element);
-      if (!records) {
-        records = new Map();
-        attributeLedger.set(element, records);
-      }
+      if (!records) attributeLedger.set(element, records = new Map());
       const previous = records.get(attribute);
-      if (!previous || current !== previous.translated) {
-        records.set(attribute, { original: current, translated });
-      }
-      element.setAttribute(attribute, translated);
+      if (!previous || current !== previous.translated) records.set(attribute, { original: current, translated: value });
+      else previous.translated = value;
+      markOwned(element);
+      element.setAttribute(attribute, value);
     }
   }
 
-  function translateRoot(rootNode) {
-    if (rootNode.nodeType === Node.ELEMENT_NODE) translateAttributes(rootNode);
-    rootNode.querySelectorAll?.("[aria-label], [title], [placeholder]").forEach(translateAttributes);
-    const walker = document.createTreeWalker(rootNode, NodeFilter.SHOW_TEXT);
-    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
-      translateTextNode(node);
+  function translateTree(root) {
+    if (!root.isConnected) return;
+    if (root.nodeType === Node.TEXT_NODE) return translateText(root);
+    if (root.nodeType !== Node.ELEMENT_NODE || root.closest(EXCLUDE)) return;
+    translateAttributes(root);
+    root.querySelectorAll("[aria-label], [title], [alt], [placeholder]").forEach(translateAttributes);
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: node => node.parentElement.closest(EXCLUDE) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+    });
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) translateText(node);
+  }
+
+  function discover(node) {
+    if (!node.isConnected) return;
+    if (node.nodeType === Node.TEXT_NODE) return translateText(node);
+    if (node.nodeType !== Node.ELEMENT_NODE || node.closest(EXCLUDE)) return;
+    if (eligible(node)) translateTree(node);
+    else node.querySelectorAll(ROOT_SELECTOR).forEach(translateTree);
+  }
+
+  function restore(records, attributes = false) {
+    for (const [node, entry] of records) {
+      if (attributes) {
+        for (const [attribute, value] of entry) {
+          if (node.getAttribute(attribute) === value.translated) node.setAttribute(attribute, value.original);
+        }
+      } else if (node.nodeValue === entry.translated) node.nodeValue = entry.original;
     }
+    records.clear();
   }
 
   function revertAll() {
-    applying = true;
-    try {
-      for (const [node, entry] of ledger) {
-        if (node.isConnected && node.nodeValue === entry.translated) {
-          node.nodeValue = entry.original;
-        }
-      }
-      ledger.clear();
-      for (const [element, records] of attributeLedger) {
-        if (!element.isConnected) continue;
-        for (const [attribute, entry] of records) {
-          if (element.getAttribute(attribute) === entry.translated) {
-            element.setAttribute(attribute, entry.original);
-          }
-        }
-      }
-      attributeLedger.clear();
-    } finally {
-      applying = false;
+    restore(ledger);
+    restore(attributeLedger, true);
+  }
+
+  function prune() {
+    // Release detached nodes; restore before React can reuse them elsewhere.
+    for (const [node, entry] of ledger) if (!node.isConnected || !eligible(node.parentElement)) {
+      if (node.nodeValue === entry.translated) node.nodeValue = entry.original;
+      ledger.delete(node);
+    }
+    for (const [node, entries] of attributeLedger) if (!node.isConnected || !eligible(node)) {
+      for (const [attribute, entry] of entries) if (node.getAttribute(attribute) === entry.translated) node.setAttribute(attribute, entry.original);
+      attributeLedger.delete(node);
     }
   }
 
-  function scan() {
-    if (stopped) return;
-    if (!isKorean()) {
-      revertAll();
-      return;
+  function onMutations(mutations) {
+    if (stopped || !isKorean()) return;
+    const pending = new Set();
+    let removed = false;
+    let scopeChanged = false;
+    for (const mutation of mutations) {
+      if (mutation.type === "attributes") {
+        const changesScope = !["aria-label", "title", "alt", "placeholder"].includes(mutation.attributeName) ||
+          (mutation.attributeName === "aria-label" && mutation.target.matches('[data-component="Modal"]'));
+        scopeChanged ||= changesScope && ownedContainers.has(mutation.target);
+        if (!changesScope) { translateAttributes(mutation.target); continue; }
+      }
+      if (mutation.type === "childList") {
+        if ([...mutation.removedNodes].some(node => ledger.has(node) || ownedContainers.has(node))) removed = true;
+        for (const node of mutation.addedNodes) pending.add(node);
+        // Removing/replacing a search highlight may change the aggregate label.
+        if (eligible(mutation.target) && [...mutation.target.childNodes].every(node =>
+          node.nodeType === Node.TEXT_NODE || node.nodeName === "MARK")) pending.add(mutation.target);
+      } else if (mutation.type === "characterData" || eligible(mutation.target) ||
+        (mutation.attributeName === "data-component" &&
+          ["RightPanel", "HomeBrowserHub"].includes(mutation.target.getAttribute("data-component")))) {
+        pending.add(mutation.target);
+      }
     }
-    applying = true;
-    try {
-      document.querySelectorAll(ROOT_SELECTOR).forEach(translateRoot);
-    } finally {
-      applying = false;
+    if (removed || scopeChanged) prune();
+    for (const node of pending) {
+      let covered = false;
+      for (let parent = node.parentNode; parent; parent = parent.parentNode) {
+        if (pending.has(parent)) { covered = true; break; }
+      }
+      if (!covered) discover(node);
     }
-  }
-
-  function schedule() {
-    if (stopped || applying || scheduled) return;
-    scheduled = true;
-    requestAnimationFrame(() => {
-      scheduled = false;
-      scan();
-    });
+    // Drop only our synchronous writes; no observer loop or animation-frame delay.
+    observer.takeRecords();
   }
 
   function start() {
-    if (stopped || bodyObserver || !document.body) return;
-    bodyObserver = new MutationObserver(schedule);
-    bodyObserver.observe(document.body, {
-      childList: true,
-      subtree: true,
-      characterData: true,
-      attributes: true,
-      attributeFilter: ["aria-label", "title", "placeholder", "aria-hidden", "data-panel-key"],
+    if (stopped || observer || !document.body) return;
+    observer = new MutationObserver(onMutations);
+    observer.observe(document.body, {
+      childList: true, subtree: true, characterData: true, attributes: true,
+      attributeFilter: ["aria-label", "title", "alt", "placeholder", "aria-hidden", "data-panel-key",
+        "data-component", "data-drawer", "data-chat-settings-section", "data-chat-control-window",
+        "data-result-id", "data-chat-agent-entry", "id"],
     });
-    languageObserver = new MutationObserver(schedule);
+    languageObserver = new MutationObserver(() => {
+      if (stopped) return;
+      if (isKorean()) document.querySelectorAll(ROOT_SELECTOR).forEach(translateTree);
+      else revertAll();
+      observer.takeRecords();
+    });
     languageObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
-    scan();
+    if (isKorean()) document.querySelectorAll(ROOT_SELECTOR).forEach(translateTree);
+    observer.takeRecords();
   }
 
   function cleanup() {
     if (stopped) return;
     stopped = true;
-    bodyObserver?.disconnect();
+    observer?.disconnect();
     languageObserver?.disconnect();
-    bodyObserver = null;
-    languageObserver = null;
+    document.removeEventListener("DOMContentLoaded", start);
     revertAll();
   }
 

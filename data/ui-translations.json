@@ -1,3 +1,8 @@
 {
-  "Not installed": "설치되지 않음"
+  "Writer Agents": "작성 에이전트",
+  "Tracker Agents": "추적 에이전트",
+  "Misc Agents": "기타 에이전트",
+  "Improve prose quality, maintain continuity, and shape the narrative direction of your roleplay.": "문장의 완성도를 높이고, 이야기의 일관성을 유지하며, 롤플레이의 서사 방향을 잡습니다.",
+  "Automatically track world state, character stats, quests, expressions, and other data that changes over time.": "세계 상태, 캐릭터 스탯, 퀘스트, 표정 등 시간에 따라 변하는 데이터를 자동으로 추적합니다.",
+  "Specialized utilities — image generation, combat systems, music, summaries, and other extras.": "이미지 생성, 전투 시스템, 음악, 요약 등 다양한 부가 기능을 제공합니다."
 }

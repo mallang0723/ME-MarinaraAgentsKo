@@ -50,7 +50,7 @@ const retiredLabels = ["All", "Conversation", "Roleplay", "Game", "Filter agents
         const name = document.createElement("strong"); name.textContent = row.englishName;
         const description = document.createElement("p"); description.textContent = row.englishDescription;
         card.append(name, description);
-        if (suffix === "catalog") {
+        if (suffix === "catalog" && !row.id.includes(":")) {
           const summary = document.createElement("small"); summary.textContent = row.englishSummary; card.append(summary);
         }
         root.appendChild(card);
@@ -60,18 +60,42 @@ const retiredLabels = ["All", "Conversation", "Roleplay", "Game", "Filter agents
         document.querySelector("#official-english").appendChild(node);
       }
     }, { rows: catalogRows, labels: retiredLabels });
+    const exact = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/exact-translations.json")));
+    const ui = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/ui-translations.json")));
+    const surfaces = require("../data/surfaces.json");
+    const fixtures = require("./surface-fixtures.json");
+    await page.evaluate(({ exact, ui, surfaces, fixtures }) => {
+      window.surfaceRoots = fixtures.map((html, i) => {
+        const host = document.createElement("section"); host.innerHTML = html; document.body.append(host);
+        const root = host.querySelector(surfaces.metadata[i]);
+        for (const english of [...Object.keys(exact), ...Object.keys(ui)]) {
+          const span = document.createElement("span"); span.dataset.surfaceSample = english;
+          span.textContent = english; root.append(span);
+        }
+        return root;
+      });
+    }, { exact, ui, surfaces, fixtures });
+    const checkSurfaces = async korean => {
+      const samples = await page.evaluate(() => window.surfaceRoots.map(root =>
+        [...root.querySelectorAll("[data-surface-sample]")].map(node => [node.dataset.surfaceSample, node.textContent])));
+      for (const [index, pairs] of samples.entries()) for (const [english, text] of pairs) {
+        equal(text, korean ? exact[english] || (index >= 3 && index <= 5 ? ui[english] : null) || english : english,
+          `registered surface ${index}: ${english}`);
+      }
+    };
     await page.addScriptTag({ path: path.resolve(__dirname, "../extension.js") });
-    await page.waitForFunction(() => document.querySelector("#not-installed").textContent === "설치되지 않음");
-    equal(catalogRows.length, 44, "44 official packages");
+    await page.waitForFunction(() => document.querySelector("#metadata-attribute").textContent === "인벤토리 트래커");
+    equal(catalogRows.length, 100, "44 packages + 44 per-Agent rows + 12 active menu variants");
     const checkPackages = async (korean) => {
       for (const row of catalogRows) for (const suffix of ["catalog", "panel", "detail"]) {
         const card = `[data-test-package="${row.id}-${suffix}"]`;
         equal(await page.textContent(`${card} strong`), korean ? row.koreanName : row.englishName, `${row.id} ${suffix} name`);
         equal(await page.textContent(`${card} p`), korean ? row.koreanDescription : row.englishDescription, `${row.id} ${suffix} description`);
-        if (suffix === "catalog") equal(await page.textContent(`${card} small`), korean ? row.koreanSummary : row.englishSummary, `${row.id} summary`);
+        if (suffix === "catalog" && !row.id.includes(":")) equal(await page.textContent(`${card} small`), korean ? row.koreanSummary : row.englishSummary, `${row.id} summary`);
       }
     };
     await checkPackages(true);
+    await checkSurfaces(true);
     equal(await page.locator("#official-english span").allTextContents(), retiredLabels, "all 14 old UI overrides retired");
     for (const [selector, expected] of [
       ["#installed", "설치된 항목"], ["#official-writer", "작성 에이전트"], ["#panel-title", "에이전트"],
@@ -94,14 +118,36 @@ const retiredLabels = ["All", "Conversation", "Roleplay", "Game", "Filter agents
     await page.waitForFunction(() => document.querySelector("#dynamic").textContent === "  관계 추적기  ");
     equal(await page.textContent("#dynamic"), "  관계 추적기  ", "SPA rerender and whitespace");
 
+    const mutationProof = await page.evaluate(async () => {
+      let queries = 0;
+      const qsa = document.querySelectorAll.bind(document);
+      document.querySelectorAll = (...args) => { queries++; return qsa(...args); };
+      const root = window.surfaceRoots[3];
+      const span = document.createElement("span"); span.textContent = "Character Tracker"; root.append(span);
+      const beforePaint = await new Promise(resolve => requestAnimationFrame(() => resolve(span.textContent)));
+      span.firstChild.nodeValue = "Custom Tracker";
+      const textUpdate = await new Promise(resolve => requestAnimationFrame(() => resolve(span.textContent)));
+      const highlight = document.createElement("span"); highlight.innerHTML = 'Character <mark>Track</mark>er';
+      window.surfaceRoots[12].append(highlight);
+      const highlighted = await new Promise(resolve => requestAnimationFrame(() => resolve(highlight.textContent)));
+      for (let i = 0; i < 200; i++) { const p = document.createElement("p"); p.textContent = "Character Tracker"; document.querySelector("#outside").append(p); }
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      document.querySelectorAll = qsa;
+      return { beforePaint, textUpdate, highlighted, queries };
+    });
+    equal(mutationProof, { beforePaint: exact["Character Tracker"], textUpdate: exact["Custom Tracker"],
+      highlighted: exact["Character Tracker"], queries: 0 }, "before-paint, characterData, highlight and observer cost");
+
     await page.evaluate(() => { document.documentElement.lang = "en"; });
-    await page.waitForFunction(() => document.querySelector("#not-installed").textContent === "Not installed");
+    await page.waitForFunction(() => document.querySelector("#metadata-attribute").textContent === "Inventory Tracker");
     await checkPackages(false);
+    await checkSurfaces(false);
     equal(await page.getAttribute("#metadata-attribute", "title"), "Inventory Tracker", "attribute reversion");
     equal(await page.textContent("#installed"), "설치된 항목", "official text survives reversion");
     await page.evaluate(() => { document.documentElement.lang = "ko-KR"; });
-    await page.waitForFunction(() => document.querySelector("#not-installed").textContent === "설치되지 않음");
+    await page.waitForFunction(() => document.querySelector("#metadata-attribute").textContent === "인벤토리 트래커");
     await checkPackages(true);
+    await checkSurfaces(true);
 
     // A late official translation and an application edit belong to the app, not our ledger.
     await page.evaluate(() => {
@@ -110,6 +156,7 @@ const retiredLabels = ["All", "Conversation", "Roleplay", "Game", "Filter agents
       window.__agentsKoCleanup(); window.__agentsKoCleanup();
     });
     await checkPackages(false);
+    await checkSurfaces(false);
     equal(await page.textContent("#not-installed"), "미설치 항목", "cleanup preserves official update");
     equal(await page.getAttribute("#metadata-attribute", "title"), "앱에서 수정한 제목", "cleanup preserves app edits");
     equal(await page.getAttribute("#metadata-attribute", "aria-label"), "Inventory Tracker", "cleanup restores owned attribute");
@@ -118,6 +165,6 @@ const retiredLabels = ["All", "Conversation", "Roleplay", "Game", "Filter agents
     equal(await page.textContent("#dynamic"), "Quest Tracker", "cleanup disconnects observers");
     equal(errors, [], "no browser errors");
     equal(externalRequests, [], "no external network requests");
-    console.log(`PASS agents-ko-overlay: ${checks} assertions; 44 packages × 3 surfaces = 132 name/description pairs, plus 44 summaries`);
+    console.log(`PASS agents-ko-overlay: ${checks} assertions; 100 metadata rows × 3 legacy surfaces plus every registered surface`);
   } finally { await browser.close(); }
 })().catch((error) => { console.error(error); process.exitCode = 1; });

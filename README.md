@@ -17,12 +17,14 @@ Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바
 - 에이전트 탭에 표시되는 공식 에이전트 이름과 설명
 - 에이전트 라이브러리(공식 카탈로그)의 에이전트 이름과 설명
 - Agent Organizer 목록의 축약 설명과 상세 페이지의 전체 설명
-- 공식 한국어 팩에 빠진 `Not installed` 목록 제목(카탈로그 안에서만 적용)
+- 채팅 설정의 하드코딩된 분류 3개와 설명(작성·추적·기타 에이전트)
+- 채팅 에이전트 카드·선택기·배지·설정 창·진행 상태, Omnibar 에이전트 행, 홈 추천·탭
+- 공식 패키지의 per-Agent 이름·설명과 활성 메뉴에서 설치 안내를 제거한 설명
 - 공식 패키지 44개 (`slurp` 대신 `slurp2`, 표시명은 `Slurp`)
 
-모드 필터·분류·설치 목록 등의 UI 라벨은 공식 한국어 팩에 맡깁니다. 이미 한국어로 표시된 패키지 설명도 덮어쓰지 않습니다. [2.5.2 소스 및 공식 번역 대조 기록](docs/compatibility-2.5.2.md)을 참고하세요.
+실제 i18n 키를 사용하는 모드 필터·분류·설치 목록 등의 UI 라벨은 공식 한국어 팩에 맡깁니다. `Not installed`, `Attach lorebook for the specific agent`도 확장이 번역하지 않습니다. 채팅 설정 배열의 하드코딩 문구만 해당 영역에서 보완합니다. 이미 한국어로 표시된 패키지 설명도 덮어쓰지 않습니다. [2.5.2 소스 및 공식 번역 대조 기록](docs/compatibility-2.5.2.md)을 참고하세요.
 
-사용자 작성 에이전트·폴더명·채팅 내용은 번역하지 않습니다. 새 패키지 또는 영문 설명이 변경된 패키지는 검수된 번역표에 추가되기 전까지 영어로 남습니다.
+일반 채팅 내용과 편집 필드는 번역하지 않습니다. 지원 영역 안에서 공식 메타데이터와 완전히 동일한 사용자 지정 이름·설명은 DOM만으로 구별할 수 없어 함께 번역될 수 있습니다. 새 패키지 또는 영문 설명이 변경된 패키지는 검수된 번역표에 추가되기 전까지 영어로 남습니다.
 
 ## 권한과 안전 경계
 
@@ -44,7 +46,7 @@ Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바
 3. `Settings → Addons → External Extensions`에서 ZIP을 가져옵니다.
 4. 확장은 비활성 draft로 들어옵니다. `manifest.json`과 `extension.js`를 검토합니다.
 5. 요청 권한이 `full_page_access` 하나뿐인지 확인하고 경고를 승인한 뒤 활성화합니다.
-6. UI 언어를 한국어로 설정하고 에이전트 탭과 에이전트 라이브러리를 확인합니다.
+6. UI 언어를 한국어로 설정하고 에이전트 탭·라이브러리·채팅 설정 → 에이전트를 확인합니다.
 
 제거할 때는 확장을 비활성화한 뒤 페이지를 새로고침하고 확장 기록을 삭제합니다.
 
@@ -53,7 +55,7 @@ Marinara 업데이트로 에이전트 이름·설명 또는 화면 구조가 바
 릴리스에 함께 적힌 SHA-256과 내려받은 ZIP의 checksum을 비교하세요.
 
 ```bash
-sha256sum marinara-agents-ko-temporary-v0.2.0.zip
+sha256sum marinara-agents-ko-temporary-v0.3.0.zip
 ```
 
 ## 개발 검증
@@ -62,21 +64,25 @@ sha256sum marinara-agents-ko-temporary-v0.2.0.zip
 python tools/build.py
 node --check extension.js
 node --check test/browser-test.cjs
+node --check test/dom-test.cjs
 python test/catalog-test.py
-# 이미 내려받은 공식 JSON과 읽기 전용 2.5.2 소스를 지정하면 12개 검사를 모두 실행합니다.
-OFFICIAL_CATALOG=/tmp/catalog.json OFFICIAL_KO=/tmp/ko.json \
-  MARINARA_REPO=/path/to/marinara-engine-ref python test/catalog-test.py
-# @playwright/test가 이미 설치된 의존성 경로를 명시합니다. 앱 서버는 실행하지 않습니다.
+# 공식 자료는 읽기 전용으로 사용합니다. 외부 네트워크 호출은 없습니다.
+OFFICIAL_CATALOG=/tmp/marinara-agents-ko-252/catalog.json \
+  OFFICIAL_PACKAGES=/home/syhekate/dev/marinara-agents-ko-contrib \
+  OFFICIAL_KO=/home/syhekate/dev/marinara/ko-ui-pack-8/ui/ko.json \
+  MARINARA_REPO=/home/syhekate/dev/marinara-engine-ref python test/catalog-test.py
+# 선택: 추출된 per-Agent JSON까지 비교하려면 OFFICIAL_AGENTS를 지정합니다.
+# LinkeDOM이 이미 설치된 디렉터리. 렌더링 없는 DOM/MutationObserver 회귀 검사입니다.
+TEST_DEPS=/path/to/dependency-installation node test/dom-test.cjs
+# @playwright/test가 이미 설치된 디렉터리. 파일 URL만 사용하며 네트워크를 차단합니다.
 MARINARA_REPO=/path/to/dependency-installation node test/browser-test.cjs
 ```
 
-`data/catalog-reviewed.tsv`와 `data/ui-translations.json`이 편집 원본입니다. `tools/build.py`는 검수표에서 `data/exact-translations.json`과 `extension.js`를 함께 생성합니다. 생성 파일을 직접 편집하지 마세요.
+`data/catalog-reviewed.tsv`, `data/ui-translations.json`, `data/surfaces.json`이 편집 원본입니다. `tools/build.py`는 검수표와 선택자 목록에서 `data/exact-translations.json`과 `extension.js`를 생성합니다. 생성 파일은 직접 편집하지 마세요.
 
-Python 검사는 표준 라이브러리만 사용합니다. 기본 실행은 8개 통과·외부 입력이 필요한 4개 건너뜀이고, 위 환경 변수를 모두 지정하면 공식 카탈로그·한국어 팩·소스 계약을 포함한 12개 검사를 실행합니다. 테스트는 외부 네트워크를 호출하지 않습니다.
+표에는 패키지 44행, per-Agent 44행, 활성 메뉴 표시문 12행이 있습니다. Python 검사는 SHA-256으로 고정된 공식 패키지 파일과 실제 Engine 표시 함수를 비교하고 빌드 재현성을 검사합니다. 브라우저와 DOM 검사는 32개 등록 선택자, 123개 정확 일치 문자열, 속성, 포털 삽입, 검색 강조, 편집 영역 제외, 언어 전환, cleanup 복원과 감시 비용을 검증합니다. Chromium 경로는 `CHROMIUM_PATH`로 지정합니다(기본 `/usr/bin/chromium`).
 
-브라우저 fixture는 파일 URL만 열고 네트워크를 차단합니다. 44개 패키지를 카탈로그·에이전트 패널·상세 호스트에 표시해 132개 이름·설명 쌍과 목록 축약 설명 44개를 검증합니다. 공식 UI 번역 보존, 숨겨진 패널 활성화, SPA 재렌더링, 언어 전환, cleanup 복원도 검사합니다. Chromium 경로는 `CHROMIUM_PATH`로 지정할 수 있습니다(기본 `/usr/bin/chromium`).
-
-이번 환경에서는 Python 검사 12개와 JS 구문 검사 2개가 통과했습니다. 브라우저 검사는 참조 저장소의 Playwright 의존성 부재로 실행하지 못했고, 별도 Chromium 시작 확인도 샌드박스 소켓 권한 오류로 실패했습니다. 실제 화면 검증은 찹쌀의 QA가 필요합니다.
+0.3.0 검증: Python 15개 통과, 오프라인 DOM 회귀 통과, JS 구문 검사 통과. Playwright는 실행했으나 Chromium이 샌드박스 소켓 권한 오류로 시작하지 못했습니다. 실제 페인트·모바일 화면 검증은 미완료이며, 재현 명령과 한계는 [대조 보고서](docs/compatibility-2.5.2.md)에 기록했습니다.
 
 ## 한계와 제거 기준
 
@@ -93,6 +99,7 @@ Python 검사는 표준 라이브러리만 사용합니다. 기본 실행은 8�
 
 | 날짜 | 변경 |
 |------|------|
+| 2026-11-07 | v0.3.0: 채팅 에이전트 표면·per-Agent 설명·Omnibar·홈 대응 |
 | 2026-11-06 | v0.2.0: Engine 2.5.2·공식 패키지 44개 대응 |
 | 2026-08-28 | v0.1.0 배포 후보 작성 (펌킨) |
 | 2026-08-28 | 공개 배포 고지·호환 범위 추가 (펌킨) |
